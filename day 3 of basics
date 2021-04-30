@@ -1,0 +1,389 @@
+var mojText = "sialala " + "123 ";
+mojText1 = mojText + "polska";
+console.log (mojText1)
+
+
+
+
+var nazwisko = "kowalska"
+var trzeciaLiteraNazwiska = nazwisko [2]
+console.log (trzeciaLiteraNazwiska)
+var ostatniaLiteraNazwiska = nazwisko[nazwisko.length - 1]
+console.log (ostatniaLiteraNazwiska)
+print = ostatniaLiteraNazwiska + ostatniaLiteraNazwiska
+
+function wordBlanks (mojRzecz, mojPrzym, mojCzas, mojPrzyslow){
+var result = "";
+result += "Pewien " + mojPrzym + " " + mojRzecz + " " + mojCzas + " do nieba." ;
+return result;
+}
+console.log(wordBlanks("pies", "ogromny", "pobiegł", "jak błyskawica"));
+console.log(wordBlanks("kot", "futrzasty", "skoczył", "gwałtownie"));
+
+var naszaArray = ["Jan", 36];
+var naszaArray = ["pimposia", 24];
+
+//nested array //
+var naszaArray = [["hipopotam", 32], ["mama hipopotama", 60  ]];
+// liczba z zakresu w nawiasie// 
+var mojZakres = [16, 24, 30];
+var mojDan = mojZakres [1]
+console.log(mojDan)
+
+var mojZakres = [17, 25, 31];
+mojZakres[1] = 15; //dyktuje zeby numeral z zakresu byl inny//
+console.log(mojZakres)
+
+var mojZakres = [[17, 25, 31], [11, 22, 33]];
+var mojDan = mojZakres [1][2];
+console.log(mojDan)
+
+var naszSzyk = ["kowalski", "J", "kot"];
+naszSzyk.push(["szczesliwy", "radość", 69])
+console.log(naszSzyk)
+
+//popped off ostatni element w szyku//
+var naszSzyk = [1,2,3];
+var skasowaneZNaszSzyk = naszSzyk.pop();
+console.log(naszSzyk)
+//shift sskasuje 1szy element w szyku
+var naszSzyk = [1,2,3];
+var skasowaneZNaszSzyk = naszSzyk.shift();
+console.log(naszSzyk) //[2,3]//
+
+//unshift dodaje element na początku kodu//
+var naszSzyk = [1,2,3];
+naszSzyk.shift();
+naszSzyk.unshift("szcześliwy");
+console.log(naszSzyk)
+
+var mojszyk = [["jan",36], ["kot",2]];
+mojszyk.shift();
+console.log (mojszyk)
+mojszyk.unshift(["mistrz, 16"]);
+console.log (mojszyk)
+
+
+var mojaLista = [["jogo", 7], ["cytryna", 7], ["sok", 3]];
+
+function ReusableFunction(){
+    console.log("lubie cyski");
+}
+ReusableFunction();
+ReusableFunction();
+ReusableFunction();
+//funkcja a*b//
+function FunkcjaZDwaElementy(a,b) {
+    console.log(a*b);
+}
+FunkcjaZDwaElementy (69,2); //wynik 138//
+
+function FunkcjaZDwaElementyy(a,b) {
+    console.log(a/b);
+}
+FunkcjaZDwaElementyy (69,2); //wynik 34,5//
+
+var mojGlobal = 100;
+
+function mojLokalnyZakres(){
+    var mojZmienna = 10;
+    console.log(mojZmienna);
+}
+mojLokalnyZakres();
+
+
+// local i global //
+
+var ciuch ="koszulka"; //global -ponad funkcją//
+function mojSwiateczny (){
+    var ciuch = "koszula"; //local variable took precedence over global "koszulka"//
+    return ciuch;
+}
+console.log (mojSwiateczny());
+console.log (ciuch);
+
+//// return vartość z funkcji// 
+function minusSiedem(num) {
+    return num - 7;
+}
+console.log(minusSiedem(8));
+
+function razySzesc(num){
+    return num * 6;
+}
+console.log (razySzesc(6))
+
+
+var sum = 0;
+function dodajTrzy(){
+    sum = sum + 3;
+}
+console.log(sum)
+
+var zmienone = 0;
+
+function zmien(num){
+    return (num + 5) * 2;
+}
+zmienone = zmien(10); // zmienione byllo zero ale zmienone zostalo zmodyfikowane funkcja zmien i stalo sie = zmien(10) czyli wynikowi return dla wartosci zmien czyli 10// 10+5 *2 =30
+console.log (zmienone)
+
+//stand in line//
+ function kolejnaWKolejce (arr, item){
+ arr.push(item); //dodaje element w szyku czyli 66, wpisany ponizej //
+ return arr.shift();      //usuwa pierwszy element w szyku i returnuje  co usunął w 2giej linijce console/
+ }
+
+ var testArr = [1,2,3,4];
+ console.log("przed: " + JSON.stringify(testArr));
+ console.log(kolejnaWKolejce(testArr, 66));
+ console.log("pozniej:" + JSON.stringify(testArr));
+
+// BooLeans
+ function Booleans(){
+     return false;
+ }
+  // iff function//
+
+  function mojaPrawdaFałsz(czyPrawda){
+      if (czyPrawda){
+          return "tak, to prawda";
+      }
+      return "nie, coś zmyślasz";
+  }
+  console.log(mojaPrawdaFałsz(true));
+
+
+
+  function PrawdaFalsz(BylaPrawda){
+      if (BylaPrawda) {
+          return "prawda f_chuj";
+        }
+        return "bujda";
+        }
+        console.log(PrawdaFalsz(true));
+
+
+        //funkcja na tindera, tylko 16latki mi pokazuj//
+        function testEqual(val){
+            if (val == 16){
+            return "tak, równo tyle";
+        }
+        return "ACHTUNG: jailbait or oldie";
+        }
+        console.log(testEqual(116));
+ /*/potrojny === to scisly match vartości a ==  to string (czyli np text, cyfra) operator,
+ a nie precyzyjny, == converts string into a number*/   
+        function testScisly(val) {
+            if (val === 8){
+                return "scisje sie zgadza"
+            }
+            return "niezupelnie sie zgadza"
+        }
+       
+        console.log(testScisly('8'))
+
+        function porownajRownosc (a, b){
+            if (a === b) {// zajebista rownosc, co do joty musibyc by równość//
+                return "rownosc";
+            }
+            return "nierówność";
+        }
+        console.log(porownajRownosc(11, '11'));
+
+        function testNieRownosci (val){
+            if (val != 16){
+                return "nie 16";
+            }
+            return "16 lat mialas gdy...";
+        }
+        console.log(testNieRownosci(16));
+
+        //test nie rowny czyli !=//
+
+    function testNierowny (val){
+        if (val != 99){
+            return "nie równy";
+        }
+        return "rowny 99";
+    }
+    console.log(testNierowny(99))
+
+    function testPrecNieRowny (val){
+        if (val !== 17)
+        return "nie rowny, czyli sie zgadza ";{
+        }
+        return "rowny f_chuj";
+    }
+    console.log(testPrecNieRowny(7))
+
+function wiekszeNiz(val){
+    if (val > 32){
+        return "over 32";
+    }
+    if (val > 16){
+        return "good to go";
+    }
+    return "jailbait albo stara proca";
+}
+console.log(wiekszeNiz(15))
+
+// moja obserwacja - najpierw wartośc większa do porownywania a poniej mniejsza, inaczej nie prazy//
+//jezeli 1st condition is met then it is not even checking further//
+
+function wiekszeRowne (val){
+    if (val >= 25) {
+        return "szuka meza";
+    }
+    if (val >= 16) {
+        return "bedzie";
+    } 
+    return "jailbait, mniej niz 16";
+}
+console.log(wiekszeRowne(26))
+
+// les than < wyglada jak L pod skosem//
+function mniejNiz (val){
+    if (val < 16) {
+        return "jailbait"
+    }
+    return "jest okej"
+}
+console.log(mniejNiz(17));
+
+ function TestLogiczny (val){
+     if (val <= 32 && val >=16){ //&& oznacza "and"//
+         return "potencjalnie okej";
+     }
+     return "jailbait lub oldie";
+ }
+
+ console.log(TestLogiczny(25));
+
+ function wykluczone (val){ //outside zbioru, inside zbioru//
+if (val <16 || val > 32){
+    return "nawet nie patrze dla sportu";
+}
+return "mozna rozwazyc";
+ }
+console.log(wykluczone(17))
+
+ // podzial na klasy dziewczyn z trzema iffami//
+ function testTrzyIf (val){
+     if (val < 16) {
+         return "jailbait";
+     }
+     if (val <25 ) {
+         return "eksperymentuje";
+     }
+     return "szuka meza";
+ }
+ console.log(testTrzyIf(26))
+
+ // podzial na klasy dziewczyn z else iffami//
+
+ function testElseIf (val){
+    if (val < 16) {
+        return "jailbaitooo";
+      } else if (val <25 ) {
+        return "eksperymentujer";
+    }   else {
+    return "szuka mezaa ja nie";
+}
+}
+console.log(testElseIf(6))
+
+
+// golf matching//
+var names = ["jednostrzal","orzel", "ptaszek", "par", "bogey"]
+ function golfiarz (par, strokes) {
+     if (strokes == 1){
+        return names [0]
+     }else if (strokes =par+4) {
+        return names [1] 
+    } else if (strokes =par+3) {
+        return names [2] 
+        
+    } else if (strokes =par-4) {
+        return names [3] 
+    } else if (strokes >=par+5) {
+        return names [4]
+    }
+}          
+console.log(golfiarz(22,15))
+
+// switch statements// 1 na pała// //2 na dopuszczający//
+function zmiana (val){
+    var answer = "";
+    switch(val){
+        case 1:
+            answer = "pała";
+            break;
+        case 2:
+            answer = "dopuszczający";
+            break;
+        case 3:
+            answer= "mierny";
+    }
+    return answer;
+}
+console.log(zmiana(3))
+
+function switchDefoult (val){
+    var answer = "";
+    switch (val) {
+        case "a":
+            answer = "alanetti";
+            break;
+        case "b":
+            answer = "bukkaketti";
+            break;
+        case "c":
+                answer = "colon rider";
+                break;
+            default: // default - jezeli warunki inne niz case a b c then default//
+            answer = "inny fetysz";
+    }
+    return answer;
+}
+console.log(switchDefoult("d")); 
+
+// klasyfikowanie kobiet//
+function sekwencyjnieLatami (val){
+    var answer = "";
+    switch (val){
+        case "ino":
+        case 17:
+        case 18:
+            answer = "barely legal";
+        break;
+        case 19:
+        case 20:
+        case 21:
+        case 22:
+        case 23:
+        case 24:
+            answer = "eksperymentuje";
+        break;
+        case 25:
+        case 26:
+        case 27:
+        case 28:
+            answer = "cisnieniowana";
+        break;
+        default :
+        answer = "nie tykać, nie patrzeć nawet, zamykać oczyyyy!"
+    }
+    return answer;
+}
+console.log(sekwencyjnieLatami("ino"))
+
+
+//returning true false value  zamiast iff// poniewaz wszystkie funkcje comparisonów są true false by default//
+function isLess (a, b){
+    return a >   b;
+}
+console.log(isLess(1,10))
+//liczenie kard blackjack//
+
+ var count = 0;
