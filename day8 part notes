@@ -1,0 +1,16 @@
+// character count//
+
+//alert(prompt("Dostaniesz tylko 17znakow ze swojego sms:").slice(0,17));
+var name = prompt ("stripper name");
+
+
+
+name.slice(0,1);
+var pierwszaLitera =name.slice(0,1)
+pierwszaLitera.toUpperCase(0);
+
+var cap1 = pierwszaLitera.toUpperCase(0);
+var cap1LowOnly = cap1 + name.slice (1,name.length);
+var resztaImienia = name.slice (1,name.length);
+resztaImienia =resztaImienia.toLowerCase (1); 
+alert ("Czesc " + cap1+ resztaImienia);
