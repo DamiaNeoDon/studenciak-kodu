@@ -1,0 +1,5 @@
+var human= prompt ("wiek psa:");
+
+human = ((human-2) * 4) +21;
+var przeliczonyWiek =human;
+alert ("Pieso na nasze ma " + przeliczonyWiek);
