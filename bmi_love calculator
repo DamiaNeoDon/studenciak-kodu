@@ -1,0 +1,71 @@
+//Create your function below this line.
+//The first parameter should be the weight and the second should be the height.
+
+
+
+
+/* If my weight is 65Kg and my height is 1.8m, I should be able to call your function like this:
+
+var bmi = bmiCalculator(65, 1.8); 
+
+bmi should equal 20 when it's rounded to the nearest whole number.
+
+*/
+
+
+function bmiCalculator(waga, wzrost_w_M){
+
+var wagaKG = (waga) ;
+var wzrostM = wzrost_w_M;
+var wzrostSq= wzrostM*wzrostM;
+
+var bmi = wagaKG/wzrostSq;   //wynik//
+var bmis = bmiCalculator(98,1.8); 
+
+}
+console.log(BMICalc(98, 1.8));
+
+
+// love generator
+
+//pseudo random no generator//
+
+var Imie1 = prompt ("Twoje imię ");
+var Imie2 = prompt ("imie walentynki");
+var n =Math.random ()
+n=n*99;
+n= Math.floor (n)+1;
+
+if (n>70);{
+    alert ("na bank bedzie miłość");
+    } else {
+    alert (Imie1 +"+"+ Imie2+ "" + n +"% szans na miłość"); 
+}
+
+/*var para = (Imie1+Imie2);
+console.log(para, n, ("% szans na miłość"))
+alert (Imie1 +"+"+ Imie2+ "" + n +"% szans na miłość");
+}
+
+//pseudo random no generator//
+
+var Imie1 = prompt ("Twoje imię ");
+var Imie2 = prompt ("imie walentynki");
+var n =Math.random ()
+n=n*99;
+n= Math.floor (n)+1;
+
+if (n>30&& n <=70 );{
+    alert (n + "%może bedzie miłość");
+}
+if (n<30);{
+    alert (n + "%jak woda i olej");    
+}
+if (n>70&& n<99);{
+    alert (n + "%wielka milosć");
+}
+
+/*var para = (Imie1+Imie2);
+console.log(para, n, ("% szans na miłość"))
+alert (Imie1 +"+"+ Imie2+ "" + n +"% szans na miłość");
+}*/
