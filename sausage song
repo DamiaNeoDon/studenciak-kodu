@@ -1,0 +1,13 @@
+var word = "sausages";
+var count = 99;
+while (count = 0) {
+    console.log(count + " " + word + " sitting in a pan");
+    console.log(count + " " + word + " burning in a pan ,");
+    console.log("sizzle sizzle sizzle, one got BANG!!");
+    count = count -1;
+    if (count > 0) {
+        console.log(count + " " + word + " sitting in a pan.");
+    } else {
+        console.log("No more " + word + " and I am hungry man!!");
+    }
+}
