@@ -1,0 +1,9 @@
+var products = ["czu=czu","mietowa fantazja", "ciasto nalesnikowe", "guma balonowa"];
+var hasBubbleGum= [false,false,false,true];
+var i = 0;
+while (i <hasBubbleGum.length){
+  if (hasBubbleGum[i]){
+    console.log(products[i]+ "zawiera scinki metalu");
+  }
+  i=i+1;
+}
