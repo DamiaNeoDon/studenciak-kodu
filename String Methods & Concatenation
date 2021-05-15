@@ -1,0 +1,84 @@
+//
+//
+//
+// let val;
+// //number to string
+//
+// //val = 688;
+// val =String(688);//3
+// val =String(4+4);
+//
+// //bool to String
+// val= String(true  );
+//
+// val=String (new Date());//it counts all the entries from console as a character 65//
+// //array to String
+// val =String ([1,3,4,6]);
+//
+//
+//
+// // // OUTPUT
+//
+// console.log(val);
+// console.log(typeof val);
+// console.log(val.length);
+
+//concatenation (łączenie, wiązanie w łańcuch)
+const firstName = "Damian";
+const lastName = "Frac";
+const str = "czesc mam na imie Damiano";
+const tagss= 'programming, money, work home, single mums';
+val= firstName+`  `+lastName;
+
+console.log(val);
+//append
+val= "Ania ";
+val+="Kowalska";
+
+console.log(val);
+
+//escaping
+
+val= "That\'s awesome can\'t wait";
+
+console.log(val);
+
+//concat
+
+val= firstName.concat(' ',lastName); //takie samo jak z +
+
+val= firstName.toLocaleUpperCase();
+console.log(val);
+
+
+//indexOf()
+//
+// val= firstName.indexOf("D"); //index of litera D w imieniu Damian, jezeli nie ma to -1
+// val =firstName.lastIndexOf(" n");
+// console.log(val);
+
+val= firstName.charAt('0');
+ console.log(val);
+
+
+//get last charAt
+val= firstName.charAt(firstName.length-1);
+console.log(val);
+
+ val =firstName.slice(-3, );// ujemny slice zabiera od tyłu
+
+
+console.log(val);
+
+//split()
+val =str.split("a"  );// to uzyteczne!! tworzy array z kazdym slowem na podstawie  w tym wypadku spacji"___"
+val= tagss.split(","); // do rozdzielania np tagow na stronke
+//replace()
+
+val = str.replace("Damiano", "DonDamiano");
+ // includes()
+console.log(val);
+
+//includes
+val = str.includes("czesc");
+console.log(val);
