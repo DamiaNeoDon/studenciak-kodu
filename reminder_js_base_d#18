@@ -1,0 +1,47 @@
+// //log to consoleconsole.log("hi swiat");console.log(123);console.log(true);var greeting ="hello varr";console.log (greeting);console.log([1,2,3,4,5,6]);console.log({a:1, b:2});console.table({a:1, b:2});console.error(`some error`);console.clear();console.warn(`warning`);console.time (`hello123`);console.log("hi swiat");console.log("hi swiat");console.log("hi swiat");console.log("hi swiat");console.log("hi swiat");console.timeEnd(`hello123`);console.log ();
+//
+//
+// //var, let, const
+//
+//
+//
+// var name =`jon doe`;
+//
+// console.log(name);
+// name =`kubi nowak`;
+// console.log(name);
+//
+// // init varr
+//
+// var greeting;
+// console.log(greeting);
+// greeting =`hi man`;
+// console.log(greeting);
+//
+//
+//
+//
+// // letters, numbers, _ , $
+//
+// const name =`jo`;
+// console.log(name);
+// name=`sara`;
+
+// const person = {
+//   name: "john",
+//   age : 30
+// }
+// //console.log(person);
+//
+// person.name = "sararara";
+// person.age =40;
+// //console.log (person);
+//
+// const numbers = ([1,2,3,4,5,6,7]);
+// numbers.push(222);
+//
+// console.log(numbers);
+//
+// const today = new Date()
+// console.log (today);
+// alert (`dziś jest `+ today);
