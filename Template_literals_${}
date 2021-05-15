@@ -1,0 +1,40 @@
+//Template Literals
+
+//concatenation (łączenie, wiązanie w łańcuch)
+
+//Template Literals
+const firstName = "Damian";
+const lastName = "Frac";
+const str = "czesc mam na imie Damiano";
+const tagss = 'programming, money, work home, single mums';
+const age = 32;
+let html;
+
+// html=   '<ul>' +
+//         '<li>Imie:'+ firstName+ '</li>' +
+//         '<li>Nazwi:'+ lastName+ '</li>' +
+//         '<li>Tekst:'   + str+   '</li>' +
+//         '<li>Tagii:'    +tagss+  '</li>'
+//         '<ul>';
+
+
+function hello() {
+  return 'hello mofo  ';
+}
+document.body.innerHTML = html;
+
+// with template strings/literals()
+
+html = `
+      <ul>
+      <li>Imie: ${firstName}</li>
+      <li>Nazwisko: ${lastName}</li>
+      <li>string: ${str}</li>
+      <li>tagi: ${tagss}</li>
+      <li>${2+3}</li>
+      <li>${hello()}</li>
+          <li>${age >30 ? 'over 30': 'under 30' } </li>    
+      <li></li>
+    </ul>
+  `;
+document.body.innerHTML = html;
