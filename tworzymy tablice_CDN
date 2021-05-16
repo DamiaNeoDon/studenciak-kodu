@@ -1,0 +1,60 @@
+// tworzymy tablice
+const numbers = [44, 55, 33, 23, 123, 1324];
+const numbers2 = new Array(1, 22, 42, 455, 32);
+const fruit = ['apple', 'pineapple', 'tomatoe', 'onion'];
+const mixeed = [22, 'hello', true, undefined, null, {
+  a: 1,
+  b: 2
+}, new Date()];
+
+let val;
+//get array lenghth
+val = numbers.length;
+console.log(mixeed.length);
+//check if sth is in the Array
+val = Array.isArray("hello");
+//
+fruit[3] = 'dziwne warzywo';
+//find index of value
+val = numbers.indexOf(44);
+//MUTATING ARRAYS
+numbers.push(666);
+//dodanie 666 na koncu numbers.unshift(222);
+//dodanie 222 na poczatku
+//zabrac ostatni
+numbers.pop()
+//zabrane 666
+numbers.shift() //zabrane 222
+splice values //wycina wartosci
+fruit.splice(2, 3); // where we wanna start 2,where we wanna end3 //reverse
+fruit.reverse(); //odwraca kolejnosc tablicy
+//concatenate ARRAYS// łączenie, spajanie tablic
+val = numbers.concat(fruit);
+//sort w kolejnosci alfabetycznej
+val = fruit.sort();
+val = numbers.sort();
+sorting numbers val = numbers.sort(function(x, y) {
+  return x - y;
+}) console.log(numbers);
+console.log(val);
+val = numbers.sort(function(x, y) {
+  return y - x;
+}) find, znajduje pierwsza vartosc w tabeli spelniajaca warunek
+
+function ponizej50(num) {
+  return num < 50;
+}
+val = numbers.find(ponizej50);
+
+console.log(numbers);
+console.log(val);
+
+
+
+function powyzej50(num) {
+  return num > 50;
+}
+val = numbers.find(powyzej50);
+
+console.log(numbers);
+console.log(val);
