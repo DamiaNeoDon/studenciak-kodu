@@ -1,0 +1,41 @@
+//object literal object DOCTYPE
+
+const person = {
+  firstName : "Steve",
+  lastName : "Kowalski",
+  age:28,
+  email: "mr.kowalski@gmail.xoc",
+  hobbies: ["music", "sport", "flying"],
+  address: {
+    city: "Wałbrzych",
+    state: "Polska"
+  },
+  getBirthYear:function(){
+    return 2021-this.age //calculating wiht "this"
+  }
+}
+
+let val;
+val=person.age;
+
+val =person;
+//get specific value
+val =person.firstName;
+val=person["firstName"]
+
+ val=person.hobbies[1];
+val=person.address.state;
+val=person.address["city"];
+val=person.getBirthYear();
+
+
+//console.log(val);
+
+const people = [
+{name: "Jon", age: 30, },
+{name: "mike",age:24}
+];
+
+for(let i=0; i<people.length; i++){
+  console.log(people[i].name);
+}
