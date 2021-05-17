@@ -1,0 +1,164 @@
+// //FUNCTONS
+//  //ES 5
+// // function greet(firstName, lastName,){
+// //   if (typeof firstName==="undefined"){firstName='John'};
+// //     if (typeof lastName==="undefined"){lastName='Doooen'};
+// //
+// //   //console.log('hello');
+// //   return "hello " +firstName + " " + lastName;
+// // }
+//
+// //greet() //calling function
+//
+// //function greet(firstName, lastName,){// without passing it in it goes to undefined
+//                                           //if defined then overrides it
+//
+// // ES 6 // better way, cleaner, easier, faster
+// function greet(firstName= "Jan", lastName= "Krajzłik"){
+//   return "czee " + firstName + " " + lastName;
+// }
+// //console.log(greet('Noe', 'Seagul'));
+//
+// //FUNCTION EXPRESSIONS
+//
+// const square = function(x =3){ //tu mozna default variable
+//  return x*x;
+// };
+// //console.log (square());// lub tu zadeklarować
+//
+// //IMMEDIATEDLY INVOKABLE FUNCTION EXPRESSIONS -IIFEs
+//
+// // (function(){                  // woo kutfa
+// //   console.log('IIFE Ran..');
+// // })();
+// // /////////////////////////////////////////////// nice design pattern
+// // (function(name){
+// //   console.log('siemano '+ name);
+// // })('Bobek');
+//
+//
+// // PROPERTY METHODS
+//
+// const todo ={
+//   add:function(){
+//     console.log('Add todo..');
+//   },
+//   edit: function(id){
+//     console.log(`edit todo ${id}`)
+//   }
+// }
+//
+// todo.delete=function(){
+//   console.log('delete todo...');
+// }
+//
+//
+// todo.add();
+// todo.edit(22 )
+// todo.delete()
+
+
+
+// LOOPS AND ITERATIONS
+// LOOPS AND ITERATIONS
+// LOOPS AND ITERATIONS
+// LOOPS AND ITERATIONS
+
+//for LOOPS
+//takes 3 parameters separated by semicolon ;
+//   1st variable- var or let //const nie moze bo wartosc ma sie zmieniac
+//            pozniej condition// as long as i is less than 10
+//             //ostatni parametr to increment of i czyli i=i+1
+//i starts with 0 and loops as long as i is no longer less than 10
+///////////////////////////
+// for(let i=0; i <=10; i++ ){
+//   //console.log('numer ' + i); //string + number in console
+//    if(i=== 3){
+//       console.log("3  to moj ulubiony numerek");
+//       continue;// wycina entry z loopa //numer1
+// }
+// // app.js:80 numer2
+// // app.js:77 3  to moj ulubiony numerek
+// // app.js:80 numer4
+// // app.js:80 numer5
+// if(i===6 ){
+//   console.log('stop the loop');
+//   break;// przerywa loopowanie
+//   //app.js:87 numer4
+//   // app.js:88 numer5
+//   // app.js:85 stop the loop
+//
+// }
+// console.log('numer'+i);
+// }
+
+//WHILE LOOP ///~ for used when yoy know how many iterations
+//while when you don't//
+//
+// let i=0;
+//
+// while(i<111 ){
+//   console.log('number'+i);
+//   i++;
+// }
+
+/////// DO WHILE LOOPS /// is going to run at least once no matter what
+//even if this condition is not met
+// let i= 0 // jezeli nadamy i=100 to i tak console wyswietli number 100 pomimo niespelnienia warunku
+//
+// do {
+//   console.log(`number`+i);
+//   i++;
+// }
+// while(i<10);
+
+
+
+//loop through the array
+// //
+const cars = ['ford', 'citroen', 'mustang', 'fiat'];
+// //
+// // for (let i=0; i<cars.length; i++){
+// // console.log(cars[i]);// da liste pozycji tablicy
+// // }
+// ////////////////CLEANER VERSION
+// // FOR EACH --- output i tak lista aut
+// cars.forEach(function(car){           // singular name of the array, albo current
+//   console.log(car);
+// });
+//
+
+
+///MAP/// to return different array
+
+// const users = [
+// {id:1, name: `john`},
+// {id:2, name:`sarah` },
+// {id:3, name: `jesicca`},
+// {id:4, name: `rabbit`},
+// ];
+//
+// const ids =users.map(function(user){
+//   return user.id;// return each id inside of an array
+//
+// });
+// console.log(ids); //(ids) odda array of user ids czyli [1,2,3,4,]
+
+//
+// cars.forEach(function(car,index, array ){
+// console.log(`${index+1} : ${car}`)
+// console.log(array); //accesses the whole array
+// });
+
+
+//for in loop (for objects)
+
+const user = {
+  firstName: "jonnn",
+  lastName: "smith",
+  age: 40
+}
+
+for (let x in user) {
+  console.log(`${x}:   ${user[x]} `); //looping through the object czyli user and getting the key value paris
+}
