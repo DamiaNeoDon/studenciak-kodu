@@ -1,0 +1,106 @@
+// // if(something){
+// //   do something
+// // } else{
+// //   do something else
+// // }
+//
+//
+//
+// const id= "100";
+//
+// // EQUAL // TO
+//
+// if (id==100){ //assigning ==
+//   console.log("CORRECT");
+// } else{
+//   console.log("Incorrect");
+// }
+//
+// // NOT EQUAL TO
+//
+// if (id !=101){
+//   console.log("Racja");
+// }else{
+//   console.log("nieRacja");
+// }
+//
+// //testing string === czyli "100" EQUAL TO VALUE AND TYPE
+//
+//
+// if (id ===100){      //incorrect bo "100" string a nie 100 number
+//   console.log("Racja");
+// }else{
+//   console.log("nieRacja");
+// }
+//
+//
+// if (id !==100){      //incorrect bo "100" string a nie 100 number
+//   console.log("Racja");
+// }else{
+//   console.log("nieRacja");
+// }
+
+//
+  // const id ='100';
+
+ // TO CHECK IF SOMETHING IS NOT THERE AT ALL
+//
+// if (typeof  id !=='undefined'    ){ // typeof  if undefined inaczej error sie pokazuje
+//   console.log(`The ID is  ${id}`);// backticks for template literals
+// }else{
+//   console.log("no ID");
+// }
+
+
+//
+// if (id >=100){ //assigning ==
+//   console.log("CORRECT");
+// } else{
+//   console.log("Incorrect");
+// }
+//
+
+//IF else {
+
+  const color = 'ble';
+  //
+  // if (color ==='red'){
+  //   console.log('color is red');
+  // }else if(color ==='blue') { //critical spacje wazne za duzo spacji i nie pokaze wyniku
+  //   console.log('color is blue');
+  // }else{
+  //   console.log('color is not red nor blue')
+  // }
+  //
+
+
+// logical operators
+
+ const name= 'steve';
+ const age = 111;
+//
+// if(age > 0 && age <12){
+//   console.log(`${name} is a child`);
+// } else if(age >=13 && age <=19){
+//   console.log (`${name} ia a teenager`);
+// }else{
+//   console.log(`${name} is an  adult`);
+// }
+
+// or ||
+if (age<16 || age>65){
+  console.log(`${name} can not run in any race`);
+} else {
+  console.log(`${name} can run any race`);
+}
+
+  const id =100;
+// ternary operators "?"  a: b
+ console.log(id === 100? `CORRRRECT`: `Incorrrect`);
+
+
+//without  braces
+if (id===100)
+  console.log(`correct`);
+  else
+  console.log(`incorrect`);
