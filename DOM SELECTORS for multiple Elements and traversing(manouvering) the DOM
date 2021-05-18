@@ -1,0 +1,189 @@
+// // // // document.getElementById();
+// // //
+// // // console.log(document.getElementById('task-title') );
+// // //
+// // //
+// // // // get things from the element
+// // //
+// // // console.log(document.getElementById('task-title').id);
+// // // console.log(document.getElementById('task-title').className);
+// // //
+// // //
+// // //
+// // // // change styling
+// // //
+// // // document.getElementById('task-title').style.background= '#999';
+// // // document.getElementById('task-title').style.color= '#ffff';
+// // // document.getElementById('task-title').style.padding = '5 px';
+// // // //document.getElementById('task-title').style.display= 'none';
+// // //
+// // //  //change the content
+// // //
+// // //  document.getElementById('task-title').textContent= "test list";
+// // //  document.getElementById('task-title').innerText= " moje zadania";
+// // //  document.getElementById('task-title').innerHTML= '<span style="color:red" >TaskList</span>';//nice inserting html
+// // //
+// // //
+// // // // above is an unefficient way
+// // //
+// // //
+// // // // change styling should go like this:
+// // // const taskTitle=document.getElementById('task-title' );
+// // // taskTitle.style.background= '#999';
+// // // taskTitle.style.color= '#443';
+// // // taskTitle.style.padding = '5 px';
+// // //
+// // // //change content should go like that:
+// // //
+// // // taskTitle.textContent= "test list";
+// // // taskTitle.innerText= " moje zadania";
+// // // taskTitle.innerHTML= '<span style="color:red" >TaskList</span>';//nice inserting html
+// // //
+// //
+// // //document.querySelector();
+// //
+// // // console.log(document.querySelector('#task-title'));
+// // // console.log(document.querySelector('.card-title'));
+// // // console.log(document.querySelector('h5'));// if more h5 then it will get the first none
+// // //
+// // //  document.querySelector('li').style.color='red';
+// // //  document.querySelector('ul li').style.color='blue';
+// // //
+// // //  document.querySelector('li:last-child').style.color='red';// ostatni element wybiera i koloruje red
+// // //  document.querySelector('li:nth-child(3)').style.color='pink';
+// // //
+// // //  document.querySelector('li:nth-child(4)').textContent='take me home';// instead of "list item"
+// // //
+// // //
+// // //   document.querySelector('li:nth-child(odd)').style.background='yellow ';// changes 1st odd (czyli 1)
+// // // document.querySelector('li:nth-child(even)').style.background='gray ';// changes 1st even (czyli 2)
+// //
+// //
+// //
+// // //DOM MULTIPLE SELECTORS
+// //
+// // //document.getElementsByClassName();
+// //
+// // // const items= document.getElementsByClassName('collection-item');
+// // // console.log(items);
+// // //
+// // // console.log(items[0]);
+// // // items[0].style.color='blue'
+// // // items[3].textContent='4-ty najwazniejszy'
+// // //
+// // // //select given items <ul/>
+// // // const listItems= document.querySelector('ul').getElementsByClassName('collection-item');
+// // // console.log(listItems);
+// //
+// // // document.getElementsByTagName();
+// //
+// // let lis= document.getElementsByTagName('li'); //selecting by TAG name this time(inner workings are the same as with class,)
+// // console.log(lis);
+// //
+// //
+// // // items[0].style.color='blue'
+// // // items[3].textContent='4-ty najwazniejszy'
+// // //
+// // // //select given items <ul/>
+// // // const listItems= document.querySelector('ul').getElementsByClassName('collection-item');
+// // // console.log(listItems);
+// //
+// // console.log(lis[1]);
+// // lis[4].style.color ="purple";
+// //
+// //
+// // //conver HTML collection into array
+// // lis =Array.from(lis);
+// // lis.reverse();
+// //
+// // // since it is an array now:
+// // lis.forEach(function(li, index ){
+// //   console.log(li.className);
+// //   li.textContent =`${index+1}: Hello`; // zmienia wszystkie pozycje li na hell yeah
+// //
+// // });
+// //
+// // console.log(lis);
+//
+//
+// //document.querySelectorAll
+//
+// const items=document.querySelectorAll('ul.collection li.collection-item'); //maskes it a nodelist
+// items.forEach(function(item,index){
+//    item.textContent =`${index}: Hello`; // does not need to be converted to and array as in above method
+//
+// });
+//
+// const liOdd=document.querySelectorAll('li:nth-child(odd)');
+// const liEven=document.querySelectorAll('li:nth-child(even)');
+//
+// liOdd.forEach(function(li, index ){ // zmienia wszystkie odd pozycje w liscie li
+//  li.style.background='#ccc';
+// });
+//
+// for(let i =0; i< liEven.length; i++){
+// liEven[i].style.background = 'red'// colors it all even in red
+// console.log(items);
+
+// }
+
+
+
+
+
+///
+
+let val;
+
+const list = document.querySelector('ul.collection');
+const listItem =document.querySelector('li.collection-item:first-child');
+
+val =listItem;
+val=list;
+
+// //get child node list
+// val=list.childNodes;//returns node list
+
+//get children element nodes
+ //val =list.children; //returns HTML COLLECTION
+
+val=list.childNodes[0];//text
+val=list.childNodes[0].nodeName;
+val=list.childNodes[3].nodeType;
+
+//1 element 2 attribute 3 text node 8comment 9document 10 DOCTYPE
+
+val = list.children;
+val= list.children[1]; // selects specific element
+val= list.children[1].textContent= 'hello';
+
+//children of children
+
+val= list.children[3].children[0] ;// x is a link here :OO
+list.children[3].children[0].id='test-link';// gives test-link ID .a href
+// first child
+// val =list.firstChild;
+// val=list.firstElementChild;
+
+//last child
+val =list.lastChild;
+val=list.lastElementChild;
+
+
+val =list.childElementCount;// 5children 5list listItems
+
+//PARENTS
+//count child elements
+//get parent node
+val =listItem.parentNode;
+val =listItem.parentElement;
+val =listItem.parentElement.parentElement;
+
+//get next sibling
+// val =listItem.nextSibling
+// val =listItem.nextElementSibling.nextElementSibling.nextElementSibling;
+//get previous sibling
+val =listItem.previousElementSibling.previousSibling[3];
+
+
+console.log(val);
