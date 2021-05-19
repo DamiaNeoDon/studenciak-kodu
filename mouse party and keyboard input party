@@ -1,0 +1,139 @@
+//9. Event Listeners & The Event Object
+
+
+// document.querySelector('.clear-tasks').addEventListener('click',function(e){
+//   console.log('hello world');
+//   e.preventDefault(); //listens to clear tasks button clicking
+//
+// });
+
+
+document.querySelector('.clear-tasks').addEventListener('click',onClick);
+
+function onClick(e){
+  //console.log('Clicked'); // auto odświeża się jeżeli href w HTML jest nie #hashOUTowany
+                            //    # breaaks it from refreshing
+
+let val;
+
+val=e;
+//event target element
+
+val= e.target;
+val= e.target.id;
+val= e.target.className;
+val=e.target.classList;
+
+e.target.innerText= 'Kliknąłeś tu :)'; //zamienia text przycisku po kliknięciu
+
+//event type
+val= e.type;
+//time stamp
+val=e.timeStamp;
+
+//coordinates of the event relative to the window
+val=e.clientY
+
+val=e.clientY;
+val=e.clientX;
+
+val=e.offsetY;// coordinates relative to element itself
+
+//mouseover
+console.log(val); //dostajemy 3classy: 1clear-tasks 2btn 3black
+
+
+
+}
+/// mouse addEventListener
+const clearBtn =document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
+const heading =document.querySelector('h5');
+
+// //click
+//
+// clearBtn.addEventListener('click', runEvent);
+//
+// //Double click
+//
+// clearBtn.addEventListener('dblclick', runEvent);
+
+// // mouse down
+// clearBtn.addEventListener('mousedown', runEvent);
+//
+// // mouse up
+// clearBtn.addEventListener('mouseup', runEvent);
+//
+
+// //mouse enter
+// card.addEventListener('mouseenter', runEvent);
+//
+// card.addEventListener('mouseleave', runEvent);
+//
+// //mouse over and mouseout
+// clearBtn.addEventListener('mouseover', runEvent);
+// clearBtn.addEventListener('mouseout', runEvent);
+
+//mouse mouseover
+//
+// card.addEventListener('mousemove', runEvent);// any movement with a mouse
+//
+//
+//
+// // EVENT HANDLER
+//
+// function runEvent(e_for_event_object){
+//     console.log(`EVENT TYPE: ${e_for_event_object.type}`)
+//     heading.textContent=`MouseX: ${e_for_event_object.offsetX} MouseY: ${e_for_event_object.offsetY}`; //cool stuff for eg a game
+//
+//     document.body.style.backgroundColor=`rgb(${e_for_event_object.offsetX}, ${e_for_event_object.offsetY}, 40)`;
+// }
+//
+//
+// KEYBOARD AND INPUT EVENTS
+
+const form = document.querySelector('form');// use id or class
+const taskInput=document.getElementById('task');
+
+const heading2 =document.querySelector('h5');
+const select =document.querySelector('select');
+
+
+//clear input
+taskInput.value='';//to clear input field (walk the dog  )
+
+
+//form.addEventListener('submit',runEvent);
+// // taskInput.addEventListener('keydown',runEvent);
+// taskInput.addEventListener('keyup',runEvent);// when releasing the key
+// taskInput.addEventListener('keypress',runEvent);// when releasing the key
+// //
+// // taskInput.addEventListener('focus', runEvent);// rejestruje klikniecia w input field
+// // taskInput.addEventListener('blur', runEvent);// rejestruje odklikniecia z+ input field
+//
+//
+//
+// taskInput.addEventListener('cut', runEvent);// cut
+// taskInput.addEventListener('paste', runEvent);// paste
+
+
+//INPUT
+// taskInput.addEventListener('input', runEvent); //any action is input
+
+// select.addEventListener('change',runEvent); // it there was select menu it would record event type change
+
+
+
+
+function runEvent(e_for_event_type){
+  console.log(`EVENT TYPE: ${e_for_event_type.type}`);
+
+console.log(e_for_event_type.target.value); //key logger
+
+// heading2.innerText= e_for_event_type.target.value;// ins and outs wpisywany text w innym miejscu strony
+//
+//   //e_for_event_type.preventDefault(); // it will stop redirect from happening, iff Btn attached to redirect link
+// //get input value
+//   console.log(taskInput.value);
+//   e_for_event_type.preventDefault();
+}
