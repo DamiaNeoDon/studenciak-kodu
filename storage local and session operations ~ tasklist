@@ -1,0 +1,54 @@
+//set local storage Item
+// localStorage.setItem('name','John');
+// localStorage.setItem('age','32');
+
+//set session storage item
+
+// sessionStorage.setItem('name','bethy');// clears out after closing sessionStorage
+//
+//
+// // remove from localStorage
+// localStorage.removeItem('name')
+//
+
+
+// get from storage
+//
+// const name= localStorage.getItem('name');
+// const age= localStorage.getItem('age');
+//
+// //clear local storage
+//
+// localStorage.clear();
+//
+// console.log(name, age);
+
+// this saves up only one task and replaces the previous one
+document.querySelector('form').addEventListener('submit',
+function(e){
+  //console.log(123);
+  const task=document.getElementById('task').value;
+//this expands create an array of tasks and store it as a string
+  let tasks;
+  //first check what is in the storage and then add to it
+  if(localStorage.getItem('tasks') ===null){
+    tasks=[];
+  }else{
+    tasks=JSON.parse(localStorage.getItem('tasks'));
+  }
+  // now pushing the task coming to the form onto variable
+  tasks.push(task);
+
+
+
+  localStorage.setItem('tasks', JSON.stringify(tasks)); // created array of tasks ["feed the cat", "walk the block", "have sex", "sleep tight", "rest well"]
+
+  alert('Task saved');
+    e.preventDefault();
+});
+//this gives out loop-through array
+const tasks = JSON.parse(localStorage.getItem('tasks'));// wont work without parsing
+
+tasks.forEach(function(task){
+  console.log(task);
+});
